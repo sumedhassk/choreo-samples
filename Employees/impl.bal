@@ -24,6 +24,7 @@ final mysql:Client dbClient = check new(
     host=HOST, user=USER, password=PASSWORD, port=PORT, database="Company"
 );
 
+// Test
 isolated function addEmployee(Employee emp) returns int|error {
     sql:ExecutionResult result = check dbClient->execute(`
         INSERT INTO Employees (employee_id, first_name, last_name, email, phone,
